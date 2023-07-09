@@ -1,0 +1,211 @@
+@import './pallette';
+@import './fonts';
+
+body {
+  background-color: $gray;
+  font-family: 'Work Sans';
+  color: $purple;
+}
+.container {
+  width: 1024px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#app-start {
+  padding: 30px 0;
+  h2 {
+    margin-top: 50px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    li {
+      border: 2px solid $iceCold;
+      border-radius: 10px;
+      margin-bottom: 22px;
+      padding: 15px 30px;
+      position: relative;
+      .description {
+        max-width: 70%;
+      }
+      .configs-holder {
+        position: absolute;
+        bottom: 15px;
+        right: 30px;
+        button {
+          padding: 8px;
+          border-radius: 3px;
+          outline: none;
+          border: none;
+          background-color: #349f5a;
+          margin: 0 8px;
+          color: #fff;
+          &.danger {
+            background-color: rgb(197, 56, 56);
+          }
+          &.edit {
+            background-color: #a28089;
+          }
+        }
+      }
+      .title-holder {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+        .react-datepicker__input-container .react-datepicker__calendar-icon {
+          fill: #fff;
+          position: relative;
+        }
+        .react-datepicker__view-calendar-icon input {
+          padding-left: 0;
+        }
+        .react-datepicker__input-container.react-datepicker__view-calendar-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          border: 1px solid $iceCold;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      h4 {
+        margin: 0;
+        font-size: 22px;
+      }
+    }
+  }
+}
+.add-todo {
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid $purple-dark;
+  position: relative;
+  .configs-holder {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .react-datepicker__input-container .react-datepicker__calendar-icon {
+      fill: #fff;
+      position: relative;
+    }
+    .react-datepicker__view-calendar-icon input {
+      padding-left: 0;
+    }
+    .react-datepicker__input-container.react-datepicker__view-calendar-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      border: 1px solid $iceCold;
+    }
+    button#form-submit {
+      width: 32px;
+      height: 32px;
+      padding: 3px;
+      border-radius: 5px;
+      background-color: #28c960;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+      &:disabled {
+        background-color: #d5d5d5;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+          saturate(2%) hue-rotate(230deg) brightness(106%) contrast(101%);
+      }
+    }
+  }
+}
+
+input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  color: $purple;
+  &[name='title'] {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  &::placeholder {
+    color: #fff;
+    opacity: 0.5;
+  }
+}
+
+textarea {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  width: 100%;
+  color: $purple;
+  font-family: 'Work Sans';
+  resize: none;
+  overflow: hidden;
+  height: auto;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #fff;
+    opacity: 0.5;
+  }
+}
+.nav-item {
+  display: flex;
+  margin: 0 -4px;
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 8px;
+    background-color: $iceCold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: pointer;
+    border: 1px solid $iceCold;
+    color: $iceCold;
+    background-color: transparent;
+    &.active {
+      border-color: $iceCold;
+      color: $gray;
+      background-color: $iceCold;
+    }
+  }
+}
+.complete-tag {
+  font-size: 14px;
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  height: 10px;
+  background-color: $gray;
+  padding: 0 5px;
+  color: $iceCold;
+}
+// .notification_success {
+//   background-color: #28c960 !important;
+//   color: #fff !important;
+// }
+
+// .notification_danger {
+//   background-color: rgb(197, 56, 56) !important;
+//   color: #fff !important;
+// }
